@@ -1,7 +1,9 @@
+import AnimatedSections from "./Components/AnimatedSections";
+
 export default function Home() {
-  return <div className="Hello">
-    <p className="one">
-      This is Bowlby One SC font
-    </p>
-  </div>;
+  return (
+    <div>
+      <AnimatedSections />
+    </div>
+  );
 }
