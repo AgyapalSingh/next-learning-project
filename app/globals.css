@@ -145,9 +145,6 @@ header{
   color: var(--primary-color);
 }
 
-
-
-
 .scroll-hint {
   position: absolute;
   bottom: 40px;
@@ -157,9 +154,20 @@ header{
   color: #fff;
   font-size: 14px;
   z-index: 10;
-  animation: fadeInUp 2s ease-out forwards;
+
+  /* Initially hidden */
   opacity: 0;
   pointer-events: none;
+
+  /* Animate fade in */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.scroll-hint.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .scroll-hint span {
@@ -194,16 +202,4 @@ header{
   0% { top: 8px; opacity: 1; }
   50% { top: 16px; opacity: 0.5; }
   100% { top: 8px; opacity: 1; }
-}
-
-/* Fade in hint */
-@keyframes fadeInUp {
-  from {
-    transform: translateX(-50%) translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
 }
