@@ -1,10 +1,13 @@
+import AnimatedSections from "./Components/AnimatedSections";
 import Header from "./Header/Header";
 
 export default function page() {
   return (
     <>
       <Header/>
-      <main></main>
+      <main>
+        <AnimatedSections/>
+      </main>
     </>
   );
 }

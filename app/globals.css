@@ -20,9 +20,15 @@
   --primary-color: #ffffff;
   --secondary-color: #000000;
   --high-lighter: #30b46b;
+  --bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
 }
 
 body{
+  background-color: var(--secondary-color);
   --primary-font-fam: var(--font-bowlby-one-sc);
   --secondary-font-fam: var(--font-rammetto-one);
   --tertiary-font-fam: var(--font-proza-libre);
@@ -35,6 +41,7 @@ body{
 
 a{
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 header{
@@ -56,9 +63,11 @@ header{
   width: 100%;
   max-width: 1280px;
   height: 60px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 0 20px;
 }
 
 .header-nav ul{
@@ -72,7 +81,7 @@ header{
 
 
 /* Section & Animation Styling */
-section {
+.animated-section {
   height: 100%;
   width: 100%;
   top: 0;
@@ -130,3 +139,8 @@ section {
   background-position: 50% 45%;
 }
 
+.animated-section{
+  font-family: var(--tertiary-font-fam);
+  font-size: 38px;
+  color: var(--primary-color);
+}
