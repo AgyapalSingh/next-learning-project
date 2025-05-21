@@ -1,66 +1,75 @@
-
-
-.Hello{
-  /* font-family: var(--font-rammetto-one); */
+/* 
+@media screen and (min-width: 1281px) and (max-width: 1536px) {
 }
 
-.one{
-  font-family: var(--font-bowlby-one-sc);
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
 }
 
-
-:root {
-  --bg-gradient: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 }
 
-* {
-  box-sizing: border-box;
-  user-select: none;
+@media screen and (min-width: 481px) and (max-width: 768px) {
 }
 
-body {
-  margin: 0;
+@media screen and (max-width: 480px) {
+} 
+*/
+
+
+:root{
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --high-lighter: #30b46b;
+}
+
+body{
+  --primary-font-fam: var(--font-bowlby-one-sc);
+  --secondary-font-fam: var(--font-rammetto-one);
+  --tertiary-font-fam: var(--font-proza-libre);
+}
+*{
+  margin: 0;;
   padding: 0;
-  height: 100vh;
-  color: white;
-  background: black;
-   font-family: var(--font-bowlby-one-sc);
-  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
-a {
-  color: #fff;
+a{
   text-decoration: none;
 }
 
-h2 {
-  font-size: clamp(1rem, 5vw, 5rem);
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0.5em;
-  margin-right: -0.5em;
-  color: hsl(0, 0, 80%);
-  width: 90vw;
-  max-width: 1200px;
-}
-
-header {
-  position: fixed;
+header{
+  font-family: var(--secondary-font-fam), sans-serif;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  width: 100%;
-  z-index: 3;
-  height: 7em;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(0.66rem, 2vw, 1rem);
-  letter-spacing: 0.5em;
+  justify-content: center;
 }
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-nav ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+
 
 /* Section & Animation Styling */
 section {
@@ -120,3 +129,4 @@ section {
     url(https://images.unsplash.com/photo-1617141636403-f511e2d5dc17?auto=format&fit=crop&w=1920&q=75);
   background-position: 50% 45%;
 }
+

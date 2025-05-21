@@ -1,9 +1,10 @@
-import AnimatedSections from "./Components/AnimatedSections";
+import Header from "./Header/Header";
 
-export default function Home() {
+export default function page() {
   return (
-    <div>
-      <AnimatedSections />
-    </div>
+    <>
+      <Header/>
+      <main></main>
+    </>
   );
 }
