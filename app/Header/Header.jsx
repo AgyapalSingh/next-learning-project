@@ -39,8 +39,7 @@ const Header = () => {
             <HiOutlineBars3CenterLeft className="nav-icon" />
           )}
         </div>
-
-        {/* Mobile Navigation Drawer */}
+        
         <div
           className={`ag-mobile-navbar ${
             isMobileMenuOpen ? "mobileDrawerOpen" : ""
