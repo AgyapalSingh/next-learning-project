@@ -8,11 +8,10 @@ import SplitType from "split-type";
 gsap.registerPlugin(Observer);
 
 const projects = [
-  { id: 1, name: "Project One", link: "/projects/1" },
-  { id: 2, name: "Project Two", link: "/projects/2" },
-  { id: 3, name: "Project Three", link: "/projects/3" },
-  { id: 4, name: "Project Four", link: "/projects/4" },
-  { id: 5, name: "Project Five", link: "/projects/5" },
+  { id: 1, name: "Project One", link: "https://calledtosurf.com/" },
+  { id: 2, name: "Project Two", link: "https://claretworld.com/" },
+  { id: 3, name: "Project Three", link: "https://uniqaya.com/" },
+  { id: 4, name: "Project Four", link: "https://vixenandfox.com.au/" },
 ];
 
 export default function AnimatedSections() {
@@ -121,7 +120,7 @@ export default function AnimatedSections() {
               <div className="bg">
                 <h2 className="animated-section-heading">
                   <a href={project.link} className="project-link">
-                    {project.name}
+                    {project.name} ↗
                   </a>
                 </h2>
               </div>
