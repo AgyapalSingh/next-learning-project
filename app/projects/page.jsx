@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import SplitType from "split-type";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 gsap.registerPlugin(Observer);
 
@@ -120,7 +121,7 @@ export default function AnimatedSections() {
               <div className="bg">
                 <h2 className="animated-section-heading">
                   <a href={project.link} className="project-link">
-                    {project.name} ↗
+                    {project.name} <FaExternalLinkAlt className="project-link-icon" />
                   </a>
                 </h2>
               </div>

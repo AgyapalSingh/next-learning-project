@@ -69,7 +69,6 @@ header {
   padding: 0 20px;
   z-index: 10;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  
 }
 .logo a {
   color: var(--secondary-color);
@@ -149,7 +148,6 @@ header {
     font-weight: 900;
   }
 }
-
 
 /* Section & Animation Styling */
 .animated-section {
@@ -241,6 +239,16 @@ header {
   border: 2px solid var(--primary-color);
   border-radius: 50px;
   padding: 10px 20px;
+  display: flex;
+   background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-link-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 .scroll-hint {
@@ -312,6 +320,11 @@ header {
 @media screen and (max-width: 480px) {
   .animated-section {
     font-size: 24px;
+  }
+  .project-link-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
   }
 }
 
