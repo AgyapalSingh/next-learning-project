@@ -59,7 +59,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 97%;
   max-width: 1280px;
   height: 60px;
   background: rgba(255, 255, 255, 0.4);
