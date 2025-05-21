@@ -39,26 +39,26 @@ const Header = () => {
             <HiOutlineBars3CenterLeft className="nav-icon" />
           )}
         </div>
-        
-        <div
-          className={`ag-mobile-navbar ${
-            isMobileMenuOpen ? "mobileDrawerOpen" : ""
-          }`}
-        >
-          <nav className="header-nav">
-            <ul>
-              <li onClick={closeMobileMenu}>
-                <Link href="/about-us">About</Link>
-              </li>
-              <li onClick={closeMobileMenu}>
-                <Link href="/projects">Projects</Link>
-              </li>
-              <li onClick={closeMobileMenu}>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      </div>
+      
+      <div
+        className={`ag-mobile-navbar ${
+          isMobileMenuOpen ? "mobileDrawerOpen" : ""
+        }`}
+      >
+        <nav className="header-nav">
+          <ul>
+            <li onClick={closeMobileMenu}>
+              <Link href="/about-us">About</Link>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <Link href="/projects">Projects</Link>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
