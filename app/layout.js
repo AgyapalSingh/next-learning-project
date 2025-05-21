@@ -1,5 +1,6 @@
 import { Bowlby_One_SC, Proza_Libre, Rammetto_One } from "next/font/google";
 import "./globals.css";
+import Header from "./Header/Header";
 
 const bowlbyOneSC = Bowlby_One_SC({
   weight: ['400'],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${bowlbyOneSC.variable} ${prozaLibre.variable} ${rammettoOne.variable}`}>
+        <Header/>
         {children}
       </body>
     </html>

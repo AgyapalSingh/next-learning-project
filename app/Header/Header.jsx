@@ -1,29 +1,28 @@
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header>
       <div className="header">
-        <div className="logo">W.</div>
+        <div className="logo">
+          <Link href="/">W.</Link>
+        </div>
 
         <nav className="header-nav">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
 
-        <div className="header-cta">
-            CTA
-        </div>
+        <div className="header-cta">CTA</div>
       </div>
     </header>
   );
