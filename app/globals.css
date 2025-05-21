@@ -15,8 +15,7 @@
 } 
 */
 
-
-:root{
+:root {
   --primary-color: #ffffff;
   --secondary-color: #000000;
   --high-lighter: #30b46b;
@@ -27,24 +26,24 @@
   );
 }
 
-body{
+body {
   background-color: var(--secondary-color);
   --primary-font-fam: var(--font-bowlby-one-sc);
   --secondary-font-fam: var(--font-rammetto-one);
   --tertiary-font-fam: var(--font-proza-libre);
 }
-*{
-  margin: 0;;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--primary-color);
 }
 
-header{
+header {
   font-family: var(--secondary-font-fam), sans-serif;
   height: 80px;
   width: 100%;
@@ -56,7 +55,7 @@ header{
   justify-content: center;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +69,7 @@ header{
   padding: 0 20px;
 }
 
-.header-nav ul{
+.header-nav ul {
   display: flex;
   list-style: none;
   margin: 0;
@@ -78,7 +77,15 @@ header{
   gap: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .header {
+    width: 97%;
+  }
 
+  .header-nav ul {
+    display: none;
+  }
+}
 
 /* Section & Animation Styling */
 .animated-section {
@@ -139,7 +146,7 @@ header{
   background-position: 50% 45%;
 }
 
-.animated-section{
+.animated-section {
   font-family: var(--tertiary-font-fam);
   font-size: 38px;
   color: var(--primary-color);
@@ -155,11 +162,9 @@ header{
   font-size: 14px;
   z-index: 10;
 
-  /* Initially hidden */
   opacity: 0;
   pointer-events: none;
 
-  /* Animate fade in */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   transform: translateX(-50%) translateY(20px);
 }
@@ -199,7 +204,23 @@ header{
 
 /* Animation for mouse wheel */
 @keyframes wheelMove {
-  0% { top: 8px; opacity: 1; }
-  50% { top: 16px; opacity: 0.5; }
-  100% { top: 8px; opacity: 1; }
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 16px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .animated-section {
+    font-size: 28px;
+  }
 }
