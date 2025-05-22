@@ -376,7 +376,14 @@ header {
 }
 
 /*  Gallery Section */
+
 .gallery-section {
+
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.gallery-section-container {
   width: 100%;
   max-width: 1280px;
   overflow: hidden;
@@ -384,6 +391,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 0;
 }
 
 .gallery-section-images {

@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default function Page() {
   const divRef = useRef(null);
@@ -51,6 +52,24 @@ export default function Page() {
         },
         "-=0.3"
       );
+
+    gsap.utils.toArray(".gallery-section-images div").forEach((el) => {
+      gsap.fromTo(
+        el,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            end: "top 60%",
+            scrub: 1,
+          },
+        }
+      );
+    });
   }, []);
 
   return (
@@ -67,21 +86,23 @@ export default function Page() {
       </section>
 
       <section className="gallery-section">
-        <div className="gallery-section-images">
-          <div className="full">
-            <img src="/projects/CalledtoSurf.png" alt="" />
-          </div>
+        <div className="gallery-section-container">
+          <div className="gallery-section-images">
+            <div className="full">
+              <img src="/projects/CalledtoSurf.png" alt="" />
+            </div>
 
-          <div className="half">
-            <img src="/projects/ClaretWorld.png" alt="" />
-          </div>
+            <div className="half">
+              <img src="/projects/ClaretWorld.png" alt="" />
+            </div>
 
-          <div className="half">
-            <img src="/projects/UniqayaLifeStyles.png" alt="" />
-          </div>
+            <div className="half">
+              <img src="/projects/UniqayaLifeStyles.png" alt="" />
+            </div>
 
-          <div className="full">
-            <img src="/projects/vixenAndFox.png" alt="" />
+            <div className="full">
+              <img src="/projects/vixenAndFox.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
