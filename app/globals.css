@@ -357,6 +357,7 @@ header {
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .hero-section-animated-text {
   width: 100%;
