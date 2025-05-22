@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         className={` ${bowlbyOneSC.variable} ${prozaLibre.variable} ${rammettoOne.variable}`}
       >
         <Header />
-        <SmoothScrolling> {children}</SmoothScrolling>
+        {children}
       </body>
     </html>
   );
