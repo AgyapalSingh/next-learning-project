@@ -56,11 +56,11 @@ export default function Page() {
   return (
     <section className="hero-section">
       <div className="hero-section-animated-text" ref={divRef}>
-        CODE
+        CODE.
         <br />
-        CREATE
+        CREATE.
         <br />
-        ELEVATE
+        ELEVATE.
         <br />
       </div>
     </section>
