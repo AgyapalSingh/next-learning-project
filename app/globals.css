@@ -346,7 +346,6 @@ header {
   width: 100%;
   max-width: 1280px;
   overflow: hidden;
-  height: 100vh;
   margin: auto;
   line-height: 15px;
   font-size: 30px;
@@ -373,5 +372,85 @@ header {
   .hero-section-animated-text {
     width: 97%;
     font-size: 68px;
+  }
+}
+
+/*  Gallery Section */
+.gallery-section {
+  width: 100%;
+  max-width: 1280px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-section-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.gallery-section-images .full {
+  grid-column: span 2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gallery-section-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-section-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-section-images img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+
+.gallery-section-images .half {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gallery-section-images .half img {
+  height: 700px;
+}
+
+@media (max-width: 768px) {
+  .gallery-section-images {
+    grid-template-columns: 1fr;
+    width: 90%;
+     gap: 30px;
+  }
+
+  .gallery-section-images img {
+    height: 400px;
+  }
+  .gallery-section-images .full {
+    grid-column: span 1;
+  }
+
+  .gallery-section-images .half {
+    grid-column: span 1;
+  }
+
+  .gallery-section-images .half img {
+    height: 400px;
   }
 }

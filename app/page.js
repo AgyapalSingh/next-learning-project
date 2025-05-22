@@ -54,15 +54,37 @@ export default function Page() {
   }, []);
 
   return (
-    <section className="hero-section">
-      <div className="hero-section-animated-text" ref={divRef}>
-        CODE.
-        <br />
-        CREATE.
-        <br />
-        ELEVATE.
-        <br />
-      </div>
-    </section>
+    <>
+      <section className="hero-section">
+        <div className="hero-section-animated-text" ref={divRef}>
+          CODE.
+          <br />
+          CREATE.
+          <br />
+          ELEVATE.
+          <br />
+        </div>
+      </section>
+
+      <section className="gallery-section">
+        <div className="gallery-section-images">
+          <div className="full">
+            <img src="/projects/CalledtoSurf.png" alt="" />
+          </div>
+
+          <div className="half">
+            <img src="/projects/ClaretWorld.png" alt="" />
+          </div>
+
+          <div className="half">
+            <img src="/projects/UniqayaLifeStyles.png" alt="" />
+          </div>
+
+          <div className="full">
+            <img src="/projects/vixenAndFox.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
