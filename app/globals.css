@@ -47,7 +47,7 @@ header {
   font-family: var(--secondary-font-fam), sans-serif;
   height: 80px;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   display: flex;
@@ -240,7 +240,7 @@ header {
   border-radius: 50px;
   padding: 10px 20px;
   display: flex;
-   background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -337,4 +337,35 @@ header {
   width: 100%;
   height: 100vh;
   color: var(--primary-color);
+}
+
+/* Home Page */
+
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  margin: auto;
+  line-height: 15px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section-animated-text {
+  width: 97%;
+  font-size: 148px;
+  font-weight: 200;
+  color: var(--primary-color);
+  line-height: 1.5;
+  text-align: left;
+  font-family: var(--primary-font-fam);
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-section-animated-text {
+    font-size: 68px;
+  }
 }
