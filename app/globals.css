@@ -344,6 +344,7 @@ header {
 .hero-section {
   height: 100vh;
   width: 100%;
+  max-width: 1280px;
   overflow: hidden;
   height: 100vh;
   margin: auto;
@@ -352,9 +353,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("/home/Hero-Bg-Img.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 .hero-section-animated-text {
-  width: 97%;
+  width: 100%;
   font-size: 148px;
   font-weight: 200;
   color: var(--primary-color);
@@ -363,9 +368,9 @@ header {
   font-family: var(--primary-font-fam);
 }
 
-
 @media screen and (max-width: 768px) {
   .hero-section-animated-text {
+    width: 97%;
     font-size: 68px;
   }
 }
