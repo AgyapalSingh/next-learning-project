@@ -18,7 +18,7 @@
 :root {
   --primary-color: #ffffff;
   --secondary-color: #000000;
-  --high-lighter: #30b46b;
+  --high-lighter: #e6f03a;
   --bg-gradient: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.6) 0%,
@@ -36,6 +36,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--high-lighter);
+  cursor: pointer;
 }
 
 a {
