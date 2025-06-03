@@ -392,7 +392,6 @@ header {
 /*  Gallery Section */
 
 .gallery-section {
-
   width: 100%;
   background-color: var(--primary-color);
 }
@@ -400,12 +399,11 @@ header {
 .gallery-section-container {
   width: 100%;
   max-width: 1280px;
-  overflow: hidden;
   margin: auto;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
 }
 
 .gallery-section-images {
@@ -414,7 +412,7 @@ header {
   gap: 20px;
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 .gallery-section-images .full {
@@ -422,28 +420,6 @@ header {
   border-radius: 20px;
   overflow: hidden;
 }
-
-.gallery-section-images img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.gallery-section-images img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.gallery-section-images img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.5);
-  cursor: pointer;
-}
-
 
 .gallery-section-images .half {
   border-radius: 20px;
@@ -454,25 +430,58 @@ header {
   height: 700px;
 }
 
+.gallery-section-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.view-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: background 0.3s ease;
+  z-index: 2;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--high-lighter);
+  color: var(--secondary-color);
+  font-family: var(--secondary-font-fam);
+}
+
 @media (max-width: 768px) {
   .gallery-section-images {
     grid-template-columns: 1fr;
     width: 90%;
-     gap: 30px;
+    gap: 30px;
   }
 
-  .gallery-section-images img {
-    height: 400px;
-  }
-  .gallery-section-images .full {
-    grid-column: span 1;
-  }
-
-  .gallery-section-images .half {
-    grid-column: span 1;
-  }
-
+  .gallery-section-images img,
   .gallery-section-images .half img {
     height: 400px;
+  }
+
+  .gallery-section-images .full,
+  .gallery-section-images .half {
+    grid-column: span 1;
   }
 }
