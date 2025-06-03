@@ -1,111 +1,11 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(SplitText, ScrollTrigger);
+import HeroSection from "./Components/HomePage/HeroSection";
+import GallerySection from "./Components/HomePage/GallerySection";
 
 export default function Page() {
-  const divRef = useRef(null);
-
-  useEffect(() => {
-    const mySplitText = new SplitText(divRef.current, {
-      type: "chars",
-      position: "relative",
-    });
-
-    const chars = mySplitText.chars;
-
-    gsap
-      .timeline({ yoyo: true, repeat: -1, repeatDelay: 0.5, delay: 1 })
-      .to(chars, {
-        duration: 0.2,
-        fontWeight: 900,
-        color: "#e6f03a",
-        scale: 0.7,
-        y: 6,
-        ease: "power2.in",
-        rotation: "180deg",
-        stagger: {
-          grid: "auto",
-          amount: 0.8,
-          from: "center",
-        },
-      })
-      .to(
-        chars,
-        {
-          duration: 0.4,
-          fontWeight: 200,
-          color: "#fff",
-          scale: 1,
-          y: 0,
-          rotation: "360deg",
-          ease: "power3.inOut",
-          stagger: {
-            grid: "auto",
-            amount: 0.8,
-            from: "center",
-          },
-        },
-        "-=0.3"
-      );
-
-    gsap.utils.toArray(".gallery-section-images div").forEach((el) => {
-      gsap.fromTo(
-        el,
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            end: "top 60%",
-            scrub: 1,
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
     <>
-      <section className="hero-section">
-        <div className="hero-section-animated-text" ref={divRef}>
-          CODE.
-          <br />
-          CREATE.
-          <br />
-          ELEVATE.
-          <br />
-        </div>
-      </section>
-
-      <section className="gallery-section">
-        <div className="gallery-section-container">
-          <div className="gallery-section-images">
-            <div className="full">
-              <img src="/projects/CalledtoSurf.png" alt="" />
-            </div>
-
-            <div className="half">
-              <img src="/projects/ClaretWorld.png" alt="" />
-            </div>
-
-            <div className="half">
-              <img src="/projects/UniqayaLifeStyles.png" alt="" />
-            </div>
-
-            <div className="full">
-              <img src="/projects/vixenAndFox.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
+      <GallerySection />
     </>
   );
 }
