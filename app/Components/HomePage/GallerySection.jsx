@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaHandPointRight } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,6 +78,7 @@ export default function GallerySection() {
 
   return (
     <section className="gallery-section">
+      <h2 className="galley-section-title"><FaHandPointRight /> &nbsp; Recent Work</h2>
       <div className="gallery-section-container">
         <div className="gallery-section-images">
           {[
