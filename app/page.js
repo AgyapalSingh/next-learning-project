@@ -8,8 +8,8 @@ export default function Page() {
     <>
       <HeroSection />
       <GallerySection />
-      <TextScrambleSection />
       <CarouselSection />
+      <TextScrambleSection />
     </>
   );
 }
