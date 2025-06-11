@@ -505,7 +505,8 @@ header {
 
 @media (max-width: 768px) {
   .galley-section-title {
-    font-size: 18px;
+    font-size: 24px;
+     margin-bottom: 20px;
   }
   .galley-section-description {
     width: 90%;
