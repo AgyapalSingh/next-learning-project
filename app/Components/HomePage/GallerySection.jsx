@@ -78,7 +78,16 @@ export default function GallerySection() {
 
   return (
     <section className="gallery-section">
-      <h2 className="galley-section-title"><FaHandPointRight /> &nbsp; Recent Work</h2>
+      <div className="gallery-section-header">
+        <h2 className="galley-section-title">
+          <FaHandPointRight /> &nbsp; Recent Work
+        </h2>
+        <p className="galley-section-description">
+          A curated selection of our latest projects—crafted with precision,
+          creativity, and purpose to deliver impactful digital experiences.
+        </p>
+      </div>
+
       <div className="gallery-section-container">
         <div className="gallery-section-images">
           {[

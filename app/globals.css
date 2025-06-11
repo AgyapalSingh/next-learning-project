@@ -395,14 +395,36 @@ header {
   width: 100%;
   background-color: var(--primary-color);
 }
+.gallery-section-header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  background-color: var(--high-lighter);
+}
 
 .galley-section-title {
   font-family: var(--secondary-font-fam);
   font-size: 48px;
   text-align: center;
   color: var(--secondary-color);
-  margin-bottom: 20px;
-  padding-top: 40px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galley-section-description {
+  font-family: var(--tertiary-font-fam);
+  font-size: 24px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,8 +505,11 @@ header {
 @media (max-width: 768px) {
   .galley-section-title {
     font-size: 18px;
-    margin-bottom: 0px;
-    padding-top: 40px;
+  }
+  .galley-section-description {
+    width: 90%;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
   .gallery-section-images {
     grid-template-columns: 1fr;
@@ -536,7 +561,7 @@ header {
 
 /*  Carousel Section *************************************************************************************************************************************************************/
 
-.carousel-section{
+.carousel-section {
   height: 100vh;
 }
 
@@ -551,7 +576,6 @@ header {
   align-items: center;
   justify-content: center;
 }
-
 
 .carousel {
   width: 100%;
@@ -586,18 +610,18 @@ header {
   font-weight: bold;
 }
 
-.carousel-image  h2{
+.carousel-image h2 {
   font-family: var(--secondary-font-fam);
   font-size: 24px;
 }
 
-.carousel-image p{
+.carousel-image p {
   font-family: var(--tertiary-font-fam);
   text-align: center;
   font-size: 18px;
 }
 
-.carousel-image-btn{
+.carousel-image-btn {
   background-color: var(--high-lighter);
   color: var(--secondary-color);
   font-size: 14px;
