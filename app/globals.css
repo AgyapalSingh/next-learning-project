@@ -17,7 +17,7 @@
 
 :root {
   --primary-color: #ffffff;
-  --primary-bg-color: #d1d1d1;
+  --primary-bg-color: #ececec;
   --secondary-color: #000000;
   --high-lighter: #e6f03a;
   /* --high-lighter: #f1ee39; */
@@ -98,6 +98,9 @@ header {
   gap: 20px;
 }
 
+.header-nav ul a {
+  color: var(--secondary-color);
+}
 .ag-mobile-navbar {
   display: none;
   position: fixed;
