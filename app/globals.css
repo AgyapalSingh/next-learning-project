@@ -17,6 +17,7 @@
 
 :root {
   --primary-color: #ffffff;
+  --primary-bg-color: #d1d1d1;
   --secondary-color: #000000;
   --high-lighter: #e6f03a;
   /* --high-lighter: #f1ee39; */
@@ -394,7 +395,7 @@ header {
 
 .gallery-section {
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--primary-bg-color);
 }
 .gallery-section-header {
   width: 100%;
@@ -506,7 +507,7 @@ header {
 @media (max-width: 768px) {
   .galley-section-title {
     font-size: 24px;
-     margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   .galley-section-description {
     width: 90%;
@@ -538,7 +539,7 @@ header {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--primary-bg-color);
 }
 
 .text-block {
