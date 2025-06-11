@@ -25,6 +25,9 @@ const Header = () => {
               <Link href="/projects">Projects</Link>
             </li>
             <li>
+              <Link href="/services">Services</Link>
+            </li>
+            <li>
               <Link href="/contact-us">Contact</Link>
             </li>
           </ul>
@@ -40,7 +43,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      
+
       <div
         className={`ag-mobile-navbar ${
           isMobileMenuOpen ? "mobileDrawerOpen" : ""
@@ -53,6 +56,9 @@ const Header = () => {
             </li>
             <li onClick={closeMobileMenu}>
               <Link href="/projects">Projects</Link>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <Link href="/services">Services</Link>
             </li>
             <li onClick={closeMobileMenu}>
               <Link href="/contact-us">Contact</Link>
