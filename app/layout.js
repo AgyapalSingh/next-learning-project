@@ -1,6 +1,6 @@
 import { Bowlby_One_SC, Proza_Libre, Rammetto_One } from "next/font/google";
 import "./globals.css";
-import Header from "./Header/Header";
+import Header from "./Components/Header/Header";
 import SmoothScrolling from "./Components/SmoothScrolling";
 
 const bowlbyOneSC = Bowlby_One_SC({
