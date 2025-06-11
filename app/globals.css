@@ -537,6 +537,17 @@ header {
 /*  Carousel Section *************************************************************************************************************************************************************/
 
 
+.carousel-section-title {
+  font-family: var(--secondary-font-fam);
+  font-size: 48px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 .carousel {
@@ -592,7 +603,12 @@ header {
   font-family: var(--tertiary-font-fam);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .carousel-section-title {
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+  }
   .carousel {
     transform: rotateX(-10deg) scale(0.6) translateY(-60px);
   }

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import Link from "next/link";
+import { FaHandPointRight } from "react-icons/fa";
 
 gsap.registerPlugin(Observer);
 
@@ -69,14 +70,22 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <div className="carousel" ref={carouselRef}>
-      {carouselData.map((item, i) => (
-        <div key={i} className="carousel-image">
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-          <Link className="carousel-image-btn" href="/"> Learn More </Link>
-        </div>
-      ))}
-    </div>
+    <section className="carousel-section">
+      <h2 className="carousel-section-title">
+        <FaHandPointRight /> &nbsp; Our Services
+      </h2>
+      <div className="carousel" ref={carouselRef}>
+        {carouselData.map((item, i) => (
+          <div key={i} className="carousel-image">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+            <Link className="carousel-image-btn" href="/">
+              {" "}
+              Learn More{" "}
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
