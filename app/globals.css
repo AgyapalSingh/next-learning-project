@@ -536,6 +536,9 @@ header {
 
 /*  Carousel Section *************************************************************************************************************************************************************/
 
+.carousel-section{
+  height: 100vh;
+}
 
 .carousel-section-title {
   font-family: var(--secondary-font-fam);
@@ -555,7 +558,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 90vh;
   transform: rotateX(-20deg) translateY(-70px);
   transform-style: preserve-3d;
   perspective: 800px;
