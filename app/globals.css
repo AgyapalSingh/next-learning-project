@@ -555,7 +555,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
   transform: rotateX(-20deg) translateY(-70px);
   transform-style: preserve-3d;
   perspective: 800px;
