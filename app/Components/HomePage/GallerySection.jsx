@@ -9,34 +9,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function GallerySection() {
   useEffect(() => {
-    gsap.utils
-      .toArray(".gallery-section-images .image-wrapper")
-      .forEach((el) => {
-        const img = el.querySelector("img");
+    // gsap.utils
+    //   .toArray(".gallery-section-images .image-wrapper")
+    //   .forEach((el) => {
+    //     const img = el.querySelector("img");
 
-        gsap.fromTo(
-          img,
-          {
-            scale: 1.5,
-            opacity: 0,
-            y: 80,
-            filter: "blur(5px) contrast(120%)",
-          },
-          {
-            scale: 1,
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px) contrast(100%)",
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-              end: "top 60%",
-              scrub: 1,
-            },
-          }
-        );
-      });
+    //     gsap.fromTo(
+    //       img,
+    //       {
+    //         scale: 1.5,
+    //         opacity: 0,
+    //         y: 80,
+    //         filter: "blur(5px) contrast(120%)",
+    //       },
+    //       {
+    //         scale: 1,
+    //         opacity: 1,
+    //         y: 0,
+    //         filter: "blur(0px) contrast(100%)",
+    //         ease: "power2.out",
+    //         scrollTrigger: {
+    //           trigger: el,
+    //           start: "top 90%",
+    //           end: "top 60%",
+    //           scrub: 1,
+    //         },
+    //       }
+    //     );
+    //   });
 
     const wrappers = document.querySelectorAll(".image-wrapper");
 
