@@ -71,9 +71,16 @@ export default function CarouselSection() {
 
   return (
     <section className="carousel-section">
-      <h2 className="carousel-section-title">
-        <FaHandPointRight /> &nbsp; Our Services
-      </h2>
+      <div className="gallery-section-header">
+        <h2 className="galley-section-title">
+          <FaHandPointRight /> &nbsp; Our Services
+        </h2>
+        <p className="galley-section-description">
+          From innovative website development to result-driven digital
+          marketing, our services are designed to help businesses thrive online
+          through strategy, creativity, and cutting-edge technology.
+        </p>
+      </div>
       <div className="carousel" ref={carouselRef}>
         {carouselData.map((item, i) => (
           <div key={i} className="carousel-image">
