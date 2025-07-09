@@ -407,8 +407,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 0px;
+  /* position: sticky;
+  top: 0px; */
   z-index: 8;
   background-color: var(--high-lighter);
 }
@@ -568,7 +568,7 @@ header {
 /*  Carousel Section *************************************************************************************************************************************************************/
 
 .carousel-section {
-  height: 120vh;
+  height: 130vh;
 }
 
 .carousel-section-title {
