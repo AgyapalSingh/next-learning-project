@@ -117,6 +117,7 @@ export const ProjectHeroSection = () => {
           src="/ball-white.svg"
           alt="Bouncing Ball"
         />
+        <span className="drag-message">*drag ball to play</span>
       </div>
       <div className="project-hero-section-content">
         <h1 className="project-hero-section-title">Our Projects</h1>
